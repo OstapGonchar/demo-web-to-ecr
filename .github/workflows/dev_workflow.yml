@@ -8,7 +8,7 @@ name: Java CI for every branch push
 on:
   push:
     branches-ignore:
-      - master
+      - main
 
 jobs:
   build:
