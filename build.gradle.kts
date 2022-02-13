@@ -6,6 +6,7 @@ plugins {
 	kotlin("jvm") version "1.6.10"
 	kotlin("plugin.spring") version "1.6.10"
 	id("com.gorylenko.gradle-git-properties") version "1.5.1"
+	id("com.google.cloud.tools.jib") version "3.2.0"
 }
 
 group = "com.web"
@@ -38,4 +39,10 @@ tasks.withType<Test> {
 
 springBoot {
 	buildInfo()
+}
+
+jib {
+	to {
+		image = "public.ecr.aws/g8j2y8m1/test-ecr/demo-web"
+	}
 }
