@@ -44,5 +44,8 @@ springBoot {
 jib {
     to {
         image = "public.ecr.aws/g8j2y8m1/test-ecr:demo-web"
+        auth {
+            username = "AWS"
+        }
     }
 }
