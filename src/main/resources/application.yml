@@ -1,0 +1,9 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info"
+  info:
+    git:
+      enabled: true
+      mode: full
